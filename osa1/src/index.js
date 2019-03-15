@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Header = ({title}) => (
-    <h1>{title}</h1>
-);
-const Total = ({total}) => (
-    <p>Yhteensä {total} tehtävää</p>
-);
-const Content = ({parts}) => parts.map(({name, quantity}, i) => <p key={i}>{name} {quantity}</p>);
+const Header = ({ title }) => <h1>{title}</h1>;
+const Total = ({ total }) => <p>Yhteensä {total} tehtävää</p>;
+const Part = ({ name, quantity }) => <p>{name} {quantity}</p>;
+const Content = ({ parts }) => parts.map(({ name, quantity }, i) =>
+    <Part key={i} name={name} quantity={quantity} />);
 
 const App = () => {
     const course = 'Half Stack -sovelluskehitys';
