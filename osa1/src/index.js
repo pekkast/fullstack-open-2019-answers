@@ -8,23 +8,25 @@ const Content = ({ parts }) => parts.map(({ name, exercises }, i) =>
     <Part key={i} name={name} exercises={exercises} />);
 
 const App = () => {
-    const course = 'Half Stack -sovelluskehitys';
-    const parts = [{
-        name: 'Reactin perusteet',
-        exercises: 10,
-    }, {
-        name: 'Tiedonvälitys propseilla',
-        exercises: 7,
-    }, {
-        name: 'Komponenttien tila',
-        exercises: 14,
-    }];
+    const course = {
+        name: 'Half Stack -sovelluskehitys',
+        parts: [{
+            name: 'Reactin perusteet',
+            exercises: 10,
+        }, {
+            name: 'Tiedonvälitys propseilla',
+            exercises: 7,
+        }, {
+            name: 'Komponenttien tila',
+            exercises: 14,
+        }]
+    };
 
     return (
         <div>
-            <Header title={course} />
-            <Content parts={parts} />
-            <Total parts={parts} />
+            <Header title={course.name} />
+            <Content parts={course.parts} />
+            <Total parts={course.parts} />
         </div>
     );
 }
