@@ -9,24 +9,22 @@ const Content = ({ parts }) => parts.map(({ name, exercises }, i) =>
 
 const App = () => {
     const course = 'Half Stack -sovelluskehitys';
-    const part1 = {
+    const parts = [{
         name: 'Reactin perusteet',
         exercises: 10,
-    };
-    const part2 = {
+    }, {
         name: 'Tiedonvälitys propseilla',
         exercises: 7,
-    };
-    const part3 = {
+    }, {
         name: 'Komponenttien tila',
         exercises: 14,
-    };
+    }];
 
     return (
         <div>
             <Header title={course} />
-            <Content parts={[part1, part2, part3]} />
-            <Total total={part1.exercises + part2.exercises + part3.exercises} />
+            <Content parts={parts} />
+            <Total total={parts.reduce((result, i) => result + i.exercises, 0)} />
         </div>
     );
 }
