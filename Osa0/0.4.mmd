@@ -1,0 +1,19 @@
+sequenceDiagram
+    Käyttäjä->Selain: Kirjoittaa tekstin foo ja painaa nappia
+    Selain->Palvelin: HTTP POST /new_note
+    Note right of Selain: application/x-www-form-urlencoded<br>note=foo
+    Palvelin-->Selain: Palauttaa HTTP 302
+    Note left of Palvelin: Uudelleenohjaus<br>Location: /notes
+    Selain->Palvelin: HTTP GET /note
+    Palvelin-->Selain: Palauttaa muistiosivun html:n
+    Note left of Palvelin: HTTP 200<br>text/html
+    Note left of Selain: Selain alkaa<br>renderöidä sivua
+    Note right of Selain: Selain tekee pyynnöt<br>html:ssä linkitetyille<br>tiedostoille
+    Selain->Palvelin: HTTP GET /main.css
+    Palvelin-->Selain: Palauttaa tyylitiedoston
+    Selain->Palvelin: HTTP GET /main.js
+    Palvelin-->Selain: Palauttaa javascriptin
+    Note left of Selain: Selain alkaa suorittaa<br>javascriptiä, joka<br>pyytää<br>json-datatiedoston
+    Selain->Palvelin: HTTP GET /data.json
+    Palvelin-->Selain: Palauttaa jsonin
+    Note left of Selain: Selain renderöi<br>muistiot näytölle

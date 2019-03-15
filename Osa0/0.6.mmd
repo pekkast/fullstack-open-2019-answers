@@ -1,0 +1,6 @@
+sequenceDiagram
+    Käyttäjä->Selain: Kirjoittaa tekstin foo ja painaa nappia
+    Selain->Palvelin: HTTP POST /new_note_spa
+    Note right of Selain: application/json<br>{"content":"foo",<br>"date":"2019-01-11"}
+    Palvelin-->Selain: Palauttaa HTTP 201
+    Note left of Selain: Selain lisää uuden<br>muistion listalle

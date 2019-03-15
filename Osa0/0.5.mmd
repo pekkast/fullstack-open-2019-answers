@@ -1,0 +1,13 @@
+sequenceDiagram
+    Selain->Palvelin: HTTP GET /spa
+    Palvelin-->Selain: Palauttaa html-koodin
+    Note left of Selain: Selain alkaa<br>renderöidä sivua
+    Note right of Selain: Selain tekee pyynnöt<br>html:ssä linkitetyille<br>tiedostoille
+    Selain->Palvelin: HTTP GET /main.css
+    Palvelin-->Selain: Palauttaa tyylitiedoston
+    Selain->Palvelin: HTTP GET /spa.js
+    Palvelin-->Selain: Palauttaa javascriptin
+    Note left of Selain: Selain alkaa suorittaa<br>javascriptiä, joka<br>pyytää<br>json-datatiedoston
+    Selain->Palvelin: HTTP GET /data.json
+    Palvelin-->Selain: Palauttaa jsonin
+    Note left of Selain: Selain renderöi<br>muistiot näytölle
