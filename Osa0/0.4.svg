@@ -1,0 +1,360 @@
+<svg id="mermaid-1552677884264" width="100%" xmlns="http://www.w3.org/2000/svg" height="100%" style="max-width:650px;" viewBox="-50 -10 650 1028"><style>
+
+
+#mermaid-1552677884264 .label {
+  font-family: 'trebuchet ms', verdana, arial;
+  color: #333; }
+
+#mermaid-1552677884264 .node rect,
+#mermaid-1552677884264 .node circle,
+#mermaid-1552677884264 .node ellipse,
+#mermaid-1552677884264 .node polygon {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+#mermaid-1552677884264 .node.clickable {
+  cursor: pointer; }
+
+#mermaid-1552677884264 .arrowheadPath {
+  fill: #333333; }
+
+#mermaid-1552677884264 .edgePath .path {
+  stroke: #333333;
+  stroke-width: 1.5px; }
+
+#mermaid-1552677884264 .edgeLabel {
+  background-color: #e8e8e8; }
+
+#mermaid-1552677884264 .cluster rect {
+  fill: #ffffde !important;
+  stroke: #aaaa33 !important;
+  stroke-width: 1px !important; }
+
+#mermaid-1552677884264 .cluster text {
+  fill: #333; }
+
+#mermaid-1552677884264 div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 12px;
+  background: #ffffde;
+  border: 1px solid #aaaa33;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+#mermaid-1552677884264 .actor {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1552677884264 text.actor {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1552677884264 .actor-line {
+  stroke: grey; }
+
+#mermaid-1552677884264 .messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1552677884264 .messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1552677884264 #arrowhead {
+  fill: #333; }
+
+#mermaid-1552677884264 #crosshead path {
+  fill: #333 !important;
+  stroke: #333 !important; }
+
+#mermaid-1552677884264 .messageText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1552677884264 .labelBox {
+  stroke: #CCCCFF;
+  fill: #ECECFF; }
+
+#mermaid-1552677884264 .labelText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1552677884264 .loopText {
+  fill: black;
+  stroke: none; }
+
+#mermaid-1552677884264 .loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #CCCCFF; }
+
+#mermaid-1552677884264 .note {
+  stroke: #aaaa33;
+  fill: #fff5ad; }
+
+#mermaid-1552677884264 .noteText {
+  fill: black;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 14px; }
+
+#mermaid-1552677884264 .activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1552677884264 .activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1552677884264 .activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+
+#mermaid-1552677884264 .section {
+  stroke: none;
+  opacity: 0.2; }
+
+#mermaid-1552677884264 .section0 {
+  fill: rgba(102, 102, 255, 0.49); }
+
+#mermaid-1552677884264 .section2 {
+  fill: #fff400; }
+
+#mermaid-1552677884264 .section1,
+#mermaid-1552677884264 .section3 {
+  fill: white;
+  opacity: 0.2; }
+
+#mermaid-1552677884264 .sectionTitle0 {
+  fill: #333; }
+
+#mermaid-1552677884264 .sectionTitle1 {
+  fill: #333; }
+
+#mermaid-1552677884264 .sectionTitle2 {
+  fill: #333; }
+
+#mermaid-1552677884264 .sectionTitle3 {
+  fill: #333; }
+
+#mermaid-1552677884264 .sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px; }
+
+
+#mermaid-1552677884264 .grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+#mermaid-1552677884264 .grid path {
+  stroke-width: 0; }
+
+
+#mermaid-1552677884264 .today {
+  fill: none;
+  stroke: red;
+  stroke-width: 2px; }
+
+
+
+#mermaid-1552677884264 .task {
+  stroke-width: 2; }
+
+#mermaid-1552677884264 .taskText {
+  text-anchor: middle;
+  font-size: 11px; }
+
+#mermaid-1552677884264 .taskTextOutsideRight {
+  fill: black;
+  text-anchor: start;
+  font-size: 11px; }
+
+#mermaid-1552677884264 .taskTextOutsideLeft {
+  fill: black;
+  text-anchor: end;
+  font-size: 11px; }
+
+
+#mermaid-1552677884264 .taskText0,
+#mermaid-1552677884264 .taskText1,
+#mermaid-1552677884264 .taskText2,
+#mermaid-1552677884264 .taskText3 {
+  fill: white; }
+
+#mermaid-1552677884264 .task0,
+#mermaid-1552677884264 .task1,
+#mermaid-1552677884264 .task2,
+#mermaid-1552677884264 .task3 {
+  fill: #8a90dd;
+  stroke: #534fbc; }
+
+#mermaid-1552677884264 .taskTextOutside0,
+#mermaid-1552677884264 .taskTextOutside2 {
+  fill: black; }
+
+#mermaid-1552677884264 .taskTextOutside1,
+#mermaid-1552677884264 .taskTextOutside3 {
+  fill: black; }
+
+
+#mermaid-1552677884264 .active0,
+#mermaid-1552677884264 .active1,
+#mermaid-1552677884264 .active2,
+#mermaid-1552677884264 .active3 {
+  fill: #bfc7ff;
+  stroke: #534fbc; }
+
+#mermaid-1552677884264 .activeText0,
+#mermaid-1552677884264 .activeText1,
+#mermaid-1552677884264 .activeText2,
+#mermaid-1552677884264 .activeText3 {
+  fill: black !important; }
+
+
+#mermaid-1552677884264 .done0,
+#mermaid-1552677884264 .done1,
+#mermaid-1552677884264 .done2,
+#mermaid-1552677884264 .done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+#mermaid-1552677884264 .doneText0,
+#mermaid-1552677884264 .doneText1,
+#mermaid-1552677884264 .doneText2,
+#mermaid-1552677884264 .doneText3 {
+  fill: black !important; }
+
+
+#mermaid-1552677884264 .crit0,
+#mermaid-1552677884264 .crit1,
+#mermaid-1552677884264 .crit2,
+#mermaid-1552677884264 .crit3 {
+  stroke: #ff8888;
+  fill: red;
+  stroke-width: 2; }
+
+#mermaid-1552677884264 .activeCrit0,
+#mermaid-1552677884264 .activeCrit1,
+#mermaid-1552677884264 .activeCrit2,
+#mermaid-1552677884264 .activeCrit3 {
+  stroke: #ff8888;
+  fill: #bfc7ff;
+  stroke-width: 2; }
+
+#mermaid-1552677884264 .doneCrit0,
+#mermaid-1552677884264 .doneCrit1,
+#mermaid-1552677884264 .doneCrit2,
+#mermaid-1552677884264 .doneCrit3 {
+  stroke: #ff8888;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+#mermaid-1552677884264 .doneCritText0,
+#mermaid-1552677884264 .doneCritText1,
+#mermaid-1552677884264 .doneCritText2,
+#mermaid-1552677884264 .doneCritText3 {
+  fill: black !important; }
+
+#mermaid-1552677884264 .activeCritText0,
+#mermaid-1552677884264 .activeCritText1,
+#mermaid-1552677884264 .activeCritText2,
+#mermaid-1552677884264 .activeCritText3 {
+  fill: black !important; }
+
+#mermaid-1552677884264 .titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: black; }
+
+#mermaid-1552677884264 g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-size: 10px; }
+
+#mermaid-1552677884264 g.classGroup rect {
+  fill: #ECECFF;
+  stroke: #9370DB; }
+
+#mermaid-1552677884264 g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 .classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #ECECFF;
+  opacity: 0.5; }
+
+#mermaid-1552677884264 .classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+#mermaid-1552677884264 .relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1552677884264 #compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #aggregationStart {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #aggregationEnd {
+  fill: #ECECFF;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 #extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#mermaid-1552677884264 .commit-id,
+#mermaid-1552677884264 .commit-msg,
+#mermaid-1552677884264 .branch-label {
+  fill: lightgrey;
+  color: lightgrey; }
+</style><style>#mermaid-1552677884264 {
+    color: rgba(0, 0, 0, 0.65);
+    font: ;
+  }</style><g></g><g><line id="actor3462" x1="75" y1="5" x2="75" y2="1017" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="0" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">Käyttäjä</tspan></text></g><g><line id="actor3463" x1="275" y1="5" x2="275" y2="1017" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="200" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">Selain</tspan></text></g><g><line id="actor3464" x1="475" y1="5" x2="475" y2="1017" class="actor-line" stroke-width="0.5px" stroke="#999"></line><rect x="400" y="0" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="32.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">Palvelin</tspan></text></g><defs><marker id="arrowhead" refX="5" refY="2" markerWidth="6" markerHeight="4" orient="auto"><path d="M 0,0 V 4 L6,2 Z"></path></marker></defs><defs><marker id="crosshead" markerWidth="15" markerHeight="8" orient="auto" refX="16" refY="4"><path fill="black" stroke="#000000" stroke-width="1px" d="M 9,2 V 6 L16,4 Z" style="stroke-dasharray: 0, 0;"></path><path fill="none" stroke="#000000" stroke-width="1px" d="M 0,1 L 6,7 M 6,1 L 0,7" style="stroke-dasharray: 0, 0;"></path></marker></defs><g><text x="175" y="93" class="messageText" style="text-anchor: middle;">Kirjoittaa tekstin foo ja painaa nappia</text><line x1="75" y1="100" x2="275" y2="100" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><text x="375" y="128" class="messageText" style="text-anchor: middle;">HTTP POST /new_note</text><line x1="275" y1="135" x2="475" y2="135" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><rect x="300" y="145" fill="#EDF2AE" stroke="#666" width="150" height="52" rx="0" ry="0" class="note"></rect><text x="296" y="169" fill="black" class="noteText"><tspan x="316" fill="black">application/x-www-form-urlencoded</tspan></text><text x="296" y="185" fill="black" class="noteText"><tspan x="316" fill="black">note=foo</tspan></text></g><g><text x="375" y="225" class="messageText" style="text-anchor: middle;">Palauttaa HTTP 302</text><line x1="475" y1="232" x2="275" y2="232" class="messageLine1" stroke-width="2" stroke="black" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="300" y="242" fill="#EDF2AE" stroke="#666" width="150" height="52" rx="0" ry="0" class="note"></rect><text x="296" y="266" fill="black" class="noteText"><tspan x="316" fill="black">Uudelleenohjaus</tspan></text><text x="296" y="282" fill="black" class="noteText"><tspan x="316" fill="black">Location: /notes</tspan></text></g><g><text x="375" y="322" class="messageText" style="text-anchor: middle;">HTTP GET /note</text><line x1="275" y1="329" x2="475" y2="329" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><text x="375" y="357" class="messageText" style="text-anchor: middle;">Palauttaa muistiosivun html:n</text><line x1="475" y1="364" x2="275" y2="364" class="messageLine1" stroke-width="2" stroke="black" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="300" y="374" fill="#EDF2AE" stroke="#666" width="150" height="52" rx="0" ry="0" class="note"></rect><text x="296" y="398" fill="black" class="noteText"><tspan x="316" fill="black">HTTP 200</tspan></text><text x="296" y="414" fill="black" class="noteText"><tspan x="316" fill="black">text/html</tspan></text></g><g><rect x="100" y="436" fill="#EDF2AE" stroke="#666" width="150" height="52" rx="0" ry="0" class="note"></rect><text x="96" y="460" fill="black" class="noteText"><tspan x="116" fill="black">Selain alkaa</tspan></text><text x="96" y="476" fill="black" class="noteText"><tspan x="116" fill="black">renderöidä sivua</tspan></text></g><g><rect x="300" y="498" fill="#EDF2AE" stroke="#666" width="150" height="68" rx="0" ry="0" class="note"></rect><text x="296" y="522" fill="black" class="noteText"><tspan x="316" fill="black">Selain tekee pyynnöt</tspan></text><text x="296" y="538" fill="black" class="noteText"><tspan x="316" fill="black">html:ssä linkitetyille</tspan></text><text x="296" y="554" fill="black" class="noteText"><tspan x="316" fill="black">tiedostoille</tspan></text></g><g><text x="375" y="594" class="messageText" style="text-anchor: middle;">HTTP GET /main.css</text><line x1="275" y1="601" x2="475" y2="601" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><text x="375" y="629" class="messageText" style="text-anchor: middle;">Palauttaa tyylitiedoston</text><line x1="475" y1="636" x2="275" y2="636" class="messageLine1" stroke-width="2" stroke="black" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><text x="375" y="664" class="messageText" style="text-anchor: middle;">HTTP GET /main.js</text><line x1="275" y1="671" x2="475" y2="671" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><text x="375" y="699" class="messageText" style="text-anchor: middle;">Palauttaa javascriptin</text><line x1="475" y1="706" x2="275" y2="706" class="messageLine1" stroke-width="2" stroke="black" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="100" y="716" fill="#EDF2AE" stroke="#666" width="150" height="84" rx="0" ry="0" class="note"></rect><text x="96" y="740" fill="black" class="noteText"><tspan x="116" fill="black">Selain alkaa suorittaa</tspan></text><text x="96" y="756" fill="black" class="noteText"><tspan x="116" fill="black">javascriptiä, joka</tspan></text><text x="96" y="772" fill="black" class="noteText"><tspan x="116" fill="black">pyytää</tspan></text><text x="96" y="788" fill="black" class="noteText"><tspan x="116" fill="black">json-datatiedoston</tspan></text></g><g><text x="375" y="828" class="messageText" style="text-anchor: middle;">HTTP GET /data.json</text><line x1="275" y1="835" x2="475" y2="835" class="messageLine0" stroke-width="2" stroke="black" style="fill: none;"></line></g><g><text x="375" y="863" class="messageText" style="text-anchor: middle;">Palauttaa jsonin</text><line x1="475" y1="870" x2="275" y2="870" class="messageLine1" stroke-width="2" stroke="black" style="stroke-dasharray: 3, 3; fill: none;"></line></g><g><rect x="100" y="880" fill="#EDF2AE" stroke="#666" width="150" height="52" rx="0" ry="0" class="note"></rect><text x="96" y="904" fill="black" class="noteText"><tspan x="116" fill="black">Selain renderöi</tspan></text><text x="96" y="920" fill="black" class="noteText"><tspan x="116" fill="black">muistiot näytölle</tspan></text></g><g><rect x="0" y="952" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="75" y="984.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="75" dy="0">Käyttäjä</tspan></text></g><g><rect x="200" y="952" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="275" y="984.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="275" dy="0">Selain</tspan></text></g><g><rect x="400" y="952" fill="#eaeaea" stroke="#666" width="150" height="65" rx="3" ry="3" class="actor"></rect><text x="475" y="984.5" dominant-baseline="central" alignment-baseline="central" class="actor" style="text-anchor: middle; font-size: 14px; font-family: Open-Sans, sans-serif;"><tspan x="475" dy="0">Palvelin</tspan></text></g></svg>
