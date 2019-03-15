@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 const Header = ({ title }) => <h1>{title}</h1>;
-const Total = ({ total }) => <p>Yhteensä {total} tehtävää</p>;
+const Total = ({ parts }) => <p>Yhteensä {parts.reduce((result, i) => result + i.exercises, 0)} tehtävää</p>;
 const Part = ({ name, exercises }) => <p>{name} {exercises}</p>;
 const Content = ({ parts }) => parts.map(({ name, exercises }, i) =>
     <Part key={i} name={name} exercises={exercises} />);
@@ -24,7 +24,7 @@ const App = () => {
         <div>
             <Header title={course} />
             <Content parts={parts} />
-            <Total total={parts.reduce((result, i) => result + i.exercises, 0)} />
+            <Total parts={parts} />
         </div>
     );
 }
