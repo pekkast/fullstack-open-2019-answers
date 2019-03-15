@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const Header = ({title}) => (
+    <h1>{title}</h1>
+);
+const Total = ({total}) => (
+    <p>Yhteensä {total} tehtävää</p>
+);
+const Content = ({parts}) => parts.map(({name, quantity}, i) => <p key={i}>{name} {quantity}</p>);
+
 const App = () => {
     const course = 'Half Stack -sovelluskehitys';
     const part1 = 'Reactin perusteet';
@@ -12,17 +20,13 @@ const App = () => {
 
     return (
         <div>
-            <h1>{course}</h1>
-            <p>
-                {part1} {exercises1}
-            </p>
-            <p>
-                {part2} {exercises2}
-            </p>
-            <p>
-                {part3} {exercises3}
-            </p>
-            <p>yhteensä {exercises1 + exercises2 + exercises3} tehtävää</p>
+            <Header title={course} />
+            <Content parts={[
+                { name: part1, quantity: exercises1 },
+                { name: part2, quantity: exercises2 },
+                { name: part3, quantity: exercises3 }
+            ]} />
+            <Total total={exercises1 + exercises2 + exercises3} />
         </div>
     );
 }
