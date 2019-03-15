@@ -1,20 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-
-const Hello = ({name, age}) => (
-    <div>
-        <p>Hello {name}, you are {age} years</p>
-    </div>
-);
 
 const App = () => {
-    const young = 17;
+    const course = 'Half Stack -sovelluskehitys';
+    const part1 = 'Reactin perusteet';
+    const exercises1 = 10;
+    const part2 = 'Tiedonvälitys propseilla';
+    const exercises2 = 7;
+    const part3 = 'Komponenttien tila';
+    const exercises3 = 14;
+
     return (
         <div>
-            <Hello name="Jussi" age={young} />
-            <Hello name="Matti" age={young + 7} />
-            <Hello name="Pekka" age={99} />
+            <h1>{course}</h1>
+            <p>
+                {part1} {exercises1}
+            </p>
+            <p>
+                {part2} {exercises2}
+            </p>
+            <p>
+                {part3} {exercises3}
+            </p>
+            <p>yhteensä {exercises1 + exercises2 + exercises3} tehtävää</p>
         </div>
     );
 }
