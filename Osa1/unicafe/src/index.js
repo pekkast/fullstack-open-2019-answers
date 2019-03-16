@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 
 const Heading = ({ text }) => <h2>{text}</h2>;
 const Button = ({ handleClick, label }) => <button onClick={handleClick}>{label}</button>;
-const Statistics = (props) => (
-    <div>
-        <p>hyvä: {props.good}</p>
-        <p>neutraali: {props.neutral}</p>
-        <p>huono: {props.bad}</p>
-        <p>yhteensä: {props.count}</p>
-        <p>keskiarvo: {props.average}</p>
-        <p>positiivisia: {props.positive} %</p>
-    </div>);
+const Statistics = (props) => {
+    return props.count ? (
+        <div>
+            <p>hyvä: {props.good}</p>
+            <p>neutraali: {props.neutral}</p>
+            <p>huono: {props.bad}</p>
+            <p>yhteensä: {props.count}</p>
+            <p>keskiarvo: {props.average}</p>
+            <p>positiivisia: {props.positive} %</p>
+        </div>
+    ) : <p>Ei yhtään palautetta vielä</p>;
+}
 
 const App = () => {
     // tallenna napit omaan tilaansa
