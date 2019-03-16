@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import TextFilter from './components/TextFilter';
+import AddPersonForm from './components/AddPersonForm';
+import PersonList from './components/PersonList';
 
 const App = () => {
   const [persons, setPersons] = useState([
@@ -30,23 +33,16 @@ const App = () => {
   return (
     <div>
       <h1>Puhelinluettelo</h1>
-      <p>
-        rajaa näytettäviä <input onChange={filterCollection} />
-      </p>
+      <TextFilter text="rajaa näytettäviä" handleChange={filterCollection} />
       <h2>Lisää uusi</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          nimi: <input placeholder="Uusi henkilö" value={newName} onChange={handleNameChange} /><br />
-          numero: <input placeholder="01234567890" value={newNumber} onChange={handleNumberChange} />
-        </div>
-        <div>
-          <button type="submit">lisää</button>
-        </div>
-      </form>
+      <AddPersonForm
+        handleSubmit={handleSubmit}
+        newName={newName}
+        handleNameChange={handleNameChange}
+        newNumber={newNumber}
+        handleNumberChange={handleNumberChange} />
       <h2>Numerot</h2>
-      <ul>
-        {visiblePersons().map(({ name, number }) => <li key={name}>{name}: {number}</li>)}
-      </ul>
+      <PersonList persons={visiblePersons()} />
     </div>
   );
 }
