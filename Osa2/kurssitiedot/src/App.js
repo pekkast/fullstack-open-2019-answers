@@ -2,7 +2,7 @@ import React from 'react';
 import Course from './components/Course';
 
 const App = () => {
-  const course = {
+  const courses = [{
     name: 'Half Stack -sovelluskehitys',
     parts: [{
       name: 'Reactin perusteet',
@@ -21,9 +21,39 @@ const App = () => {
       exercises: 7,
       id: 4,
     }]
-  };
+  }, {
+    name: 'Node.js',
+    id: 2,
+    parts: [
+      {
+        name: 'Routing',
+        exercises: 3,
+        id: 1
+      },
+      {
+        name: 'Middlewaret',
+        exercises: 7,
+        id: 2
+      }
+    ]
+  }, {
+    name: 'Angular',
+    id: 3,
+    parts: [
+      {
+        name: 'Router',
+        exercises: 4,
+        id: 1
+      },
+      {
+        name: 'NGXS',
+        exercises: 6,
+        id: 2
+      }
+    ]
+  }];
 
-  return <Course course={course} />;
+  return courses.map(course => <Course course={course} />);
 }
 
 export default App;
