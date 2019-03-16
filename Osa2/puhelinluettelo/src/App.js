@@ -65,7 +65,7 @@ const App = () => {
     }
   };
 
-  const visiblePersons = () => persons.filter(p => p.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
+  const visiblePersons = persons.filter(p => p.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
 
   const handleNameChange = event => setNewName(event.target.value);
   const handleNumberChange = event => setNewNumber(event.target.value);
@@ -83,7 +83,7 @@ const App = () => {
         newNumber={newNumber}
         handleNumberChange={handleNumberChange} />
       <h2>Numerot</h2>
-      <PersonList persons={visiblePersons()} removeHandler={removePerson} />
+      <PersonList persons={visiblePersons} removeHandler={removePerson} />
     </div>
   );
 }
