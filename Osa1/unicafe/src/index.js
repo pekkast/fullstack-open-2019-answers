@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 
 const Heading = ({ text }) => <h2>{text}</h2>;
 const Button = ({ handleClick, label }) => <button onClick={handleClick}>{label}</button>;
+const Statistic = ({ text, value }) => <p>{text}: {value}</p>
 const Statistics = (props) => {
     return props.count ? (
         <div>
-            <p>hyvä: {props.good}</p>
-            <p>neutraali: {props.neutral}</p>
-            <p>huono: {props.bad}</p>
-            <p>yhteensä: {props.count}</p>
-            <p>keskiarvo: {props.average}</p>
-            <p>positiivisia: {props.positive} %</p>
+            <Statistic text="hyvä" value={props.good} />
+            <Statistic text="neutraali" value={props.neutral} />
+            <Statistic text="huono" value={props.bad} />
+            <Statistic text="yhteensä" value={props.count} />
+            <Statistic text="keskiarvo" value={props.average} />
+            <Statistic text="positiivisia" value={`${props.positive} %`} />
         </div>
     ) : <p>Ei yhtään palautetta vielä</p>;
 }
