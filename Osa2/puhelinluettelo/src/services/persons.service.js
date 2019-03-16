@@ -1,0 +1,20 @@
+import axios from 'axios';
+
+const getAll = () => axios
+    .get('http://localhost:3001/persons')
+    .then(response => response.data);
+
+const getOne = (id) => axios
+    .get(`http://localhost:3001/persons${id}`)
+    .then(response => response.data);
+
+const create = (person) => axios
+    .post('http://localhost:3001/persons', person)
+    .then(response => response.data);
+
+const update = (person) => axios
+    .put(`http://localhost:3001/persons${person.id}`, person)
+    .then(response => response.data);
+
+
+export default { getAll, getOne, create, update };

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import TextFilter from './components/TextFilter';
 import AddPersonForm from './components/AddPersonForm';
 import PersonList from './components/PersonList';
+import personsService from './services/persons.service';
 
 const App = () => {
   const [persons, setPersons] = useState([]);
@@ -11,9 +11,7 @@ const App = () => {
   const [searchString, setSearchString] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:3001/persons').then(response => {
-      setPersons(response.data);
-    });
+    personsService.getAll().then(data => setPersons(data));
   }, []);
 
   const handleSubmit = (event) => {
@@ -21,9 +19,14 @@ const App = () => {
     if (persons.findIndex(p => p.name === newName) !== -1) {
       return alert(`${newName} on jo luettelossa`);
     }
-    setPersons(persons.concat({ name: newName, number: newNumber }));
-    setNewName('');
-    setNewNumber('');
+
+    personsService
+      .create({ name: newName, number: newNumber })
+      .then(person => {
+        setPersons(persons.concat(person));
+        setNewName('');
+        setNewNumber('');
+      });
   };
 
   const visiblePersons = () => persons.filter(p => p.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
