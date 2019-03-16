@@ -5,7 +5,7 @@ const getAll = () => axios
     .then(response => response.data);
 
 const getOne = (id) => axios
-    .get(`http://localhost:3001/persons${id}`)
+    .get(`http://localhost:3001/persons/${id}`)
     .then(response => response.data);
 
 const create = (person) => axios
@@ -13,8 +13,11 @@ const create = (person) => axios
     .then(response => response.data);
 
 const update = (person) => axios
-    .put(`http://localhost:3001/persons${person.id}`, person)
+    .put(`http://localhost:3001/persons/${person.id}`, person)
     .then(response => response.data);
 
+const remove = (id) => axios
+    .delete(`http://localhost:3001/persons/${id}`)
+    .then(response => response.data);
 
-export default { getAll, getOne, create, update };
+export default { getAll, getOne, create, update, remove };

@@ -29,6 +29,25 @@ const App = () => {
       });
   };
 
+  const removePerson = (person) => {
+    if (window.confirm(`Vahvista henkilön ${person.name} poisto`)) {
+    personsService
+      .remove(person.id)
+      .then(() => {
+        const updated = [...persons];
+        const idx = updated.findIndex(p => p.id === person.id);
+        if (idx !== -1) {
+          updated.splice(idx, 1);
+        }
+        setPersons(updated);
+      })
+      .catch(reason => {
+        alert(`Virhetilanne: ${person.name} lienee jo poistettu`);
+        personsService.getAll().then(data => setPersons(data));
+      })
+    }
+  };
+
   const visiblePersons = () => persons.filter(p => p.name.toLowerCase().indexOf(searchString.toLowerCase()) !== -1);
 
   const handleNameChange = event => setNewName(event.target.value);
@@ -47,7 +66,7 @@ const App = () => {
         newNumber={newNumber}
         handleNumberChange={handleNumberChange} />
       <h2>Numerot</h2>
-      <PersonList persons={visiblePersons()} />
+      <PersonList persons={visiblePersons()} removeHandler={removePerson} />
     </div>
   );
 }
