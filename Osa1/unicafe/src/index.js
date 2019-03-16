@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 const Heading = ({ text }) => <h2>{text}</h2>;
 const Button = ({ handleClick, label }) => <button onClick={handleClick}>{label}</button>;
-const Statistic = ({ text, value }) => <p>{text}: {value}</p>
+const Statistic = ({ text, value }) => <tr><th>{text}</th><td>{value}</td></tr>;
 const Statistics = (props) => {
     return props.count ? (
-        <div>
-            <Statistic text="hyvä" value={props.good} />
-            <Statistic text="neutraali" value={props.neutral} />
-            <Statistic text="huono" value={props.bad} />
-            <Statistic text="yhteensä" value={props.count} />
-            <Statistic text="keskiarvo" value={props.average} />
-            <Statistic text="positiivisia" value={`${props.positive} %`} />
-        </div>
+        <table>
+            <tbody>
+                <Statistic text="hyvä" value={props.good} />
+                <Statistic text="neutraali" value={props.neutral} />
+                <Statistic text="huono" value={props.bad} />
+                <Statistic text="yhteensä" value={props.count} />
+                <Statistic text="keskiarvo" value={props.average} />
+                <Statistic text="positiivisia" value={`${props.positive} %`} />
+            </tbody>
+        </table>
     ) : <p>Ei yhtään palautetta vielä</p>;
 }
 
