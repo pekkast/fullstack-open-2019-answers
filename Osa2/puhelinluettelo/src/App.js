@@ -7,7 +7,11 @@ const App = () => {
   const [newName, setNewName] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (persons.findIndex(p => p.name === newName) !== -1) {
+      return alert(`${newName} on jo luettelossa`);
+    }
     setPersons(persons.concat({ name: newName }));
+    setNewName('');
   };
   const handleTextChange = event => setNewName(event.target.value);
 
