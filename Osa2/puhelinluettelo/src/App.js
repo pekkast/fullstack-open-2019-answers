@@ -16,8 +16,25 @@ const App = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (persons.findIndex(p => p.name === newName) !== -1) {
-      return alert(`${newName} on jo luettelossa`);
+    const idx = persons.findIndex(p => p.name === newName);
+    if (idx !== -1) {
+      if (window.confirm(`${newName} on jo luettelossa. Korvataanko vanha numero uudella?`)) {
+        const update = { ...persons[idx], number: newNumber };
+        personsService
+          .update(update)
+          .then(() => {
+            const newState = [...persons];
+            newState[idx] = update;
+            setPersons(newState);
+            setNewName('');
+            setNewNumber('');
+          })
+          .catch(reason => {
+            alert(`Virhetilanne: ${update.name} lienee jo poistettu. Yritä tallentaa uudelleen.`);
+            personsService.getAll().then(data => setPersons(data));
+          })
+      }
+      return;
     }
 
     personsService
