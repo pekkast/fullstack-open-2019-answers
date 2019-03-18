@@ -1,5 +1,5 @@
 import axios from 'axios';
-const apiBaseUrl = 'http://localhost:3001/api/persons';
+const apiBaseUrl = '/api/persons';
 
 const getAll = () => axios
     .get(apiBaseUrl)
@@ -11,6 +11,7 @@ const getOne = (id) => axios
 
 const create = (person) => axios
     .post(apiBaseUrl, person)
+    .then(response => axios.get(response.headers.location))
     .then(response => response.data);
 
 const update = (person) => axios
