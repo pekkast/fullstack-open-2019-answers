@@ -40,6 +40,10 @@ const App = () => {
         setNewName('');
         setNewNumber('');
         setSuccess(`Lisättiin luetteloon ${person.name}`);
+      })
+      .catch(error => {
+        setError(error.response.data ? `Virhetilanne: ${error.response.data.error}` : error.message);
+        personsService.getAll().then(data => setPersons(data));
       });
   };
 
@@ -64,7 +68,7 @@ const App = () => {
       .catch(reason => {
         setError(`Virhetilanne: ${update.name} lienee jo poistettu. Yritä tallentaa uudelleen.`);
         personsService.getAll().then(data => setPersons(data));
-      })
+      });
   };
 
   const removePerson = (person) => {
@@ -83,7 +87,7 @@ const App = () => {
         .catch(reason => {
           setError(`Virhetilanne: ${person.name} lienee jo poistettu`);
           personsService.getAll().then(data => setPersons(data));
-        })
+        });
     }
   };
 
