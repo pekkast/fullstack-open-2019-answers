@@ -18,7 +18,8 @@ const App = () => {
     personsService.getAll().then(data => setPersons(data));
   }, []);
 
-  const setError = (message) => {
+  const setError = (error, defaultMessage) => {
+    const message = error.response.data ? `Virhetilanne: ${error.response.data.error}` : defaultMessage;
     setErrorMessage(message);
     setTimeout(() => {
       setErrorMessage(null);
@@ -42,7 +43,7 @@ const App = () => {
         setSuccess(`Lisättiin luetteloon ${person.name}`);
       })
       .catch(error => {
-        setError(error.response.data ? `Virhetilanne: ${error.response.data.error}` : error.message);
+        setError(error, error.message);
         personsService.getAll().then(data => setPersons(data));
       });
   };
@@ -65,8 +66,8 @@ const App = () => {
         setNewNumber('');
         setSuccess(`Päivitettiin ${update.name}`);
       })
-      .catch(reason => {
-        setError(`Virhetilanne: ${update.name} lienee jo poistettu. Yritä tallentaa uudelleen.`);
+      .catch(error => {
+        setError(error, `Virhetilanne: ${update.name} lienee jo poistettu. Yritä tallentaa uudelleen.`);
         personsService.getAll().then(data => setPersons(data));
       });
   };
@@ -84,8 +85,8 @@ const App = () => {
           setPersons(updated);
           setSuccess(`Poistettiin ${person.name}`);
         })
-        .catch(reason => {
-          setError(`Virhetilanne: ${person.name} lienee jo poistettu`);
+        .catch(error => {
+          setError(error, `Virhetilanne: ${person.name} lienee jo poistettu`);
           personsService.getAll().then(data => setPersons(data));
         });
     }
